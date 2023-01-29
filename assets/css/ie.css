@@ -6965,8 +6965,27 @@ h1.page-title {
 
 .primary-navigation a:hover {
 	text-decoration: underline;
-	text-decoration-style: dotted;
+	/*text-decoration-style: dotted;*/
 }
+.primary-navigation a:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #18272F;
+	bottom: 0;
+	left: 0;
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform .3s ease-in-out;
+}
+
+.primary-navigation a:hover:before {
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
 
 .primary-navigation a:focus {
 	position: relative;
@@ -6977,14 +6996,14 @@ h1.page-title {
 
 .primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
-	text-decoration: underline;
-	text-decoration-style: solid;
+	/*text-decoration: underline;
+	text-decoration-style: solid;*/
 }
 
 .primary-navigation .current-menu-item > a:first-child:hover,
 .primary-navigation .current_page_item > a:first-child:hover {
-	text-decoration: underline;
-	text-decoration-style: dotted;
+	/*text-decoration: underline;
+	text-decoration-style: dotted;*/
 }
 
 .primary-navigation .sub-menu {
